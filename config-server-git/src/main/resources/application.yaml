@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ayse-ozcan/config-repo-uygulama.git
+          default-label: main
+          skip-ssl-validation: true
+          username: ayse-ozcan
+          password: ${GIT_UYG_PASS}
